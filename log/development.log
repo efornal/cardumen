@@ -1,0 +1,344 @@
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-03-18 12:09:23 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Rendered /var/lib/gems/2.1.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (4.9ms)
+Completed 500 Internal Server Error in 3954ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes.
+  (in /var/lib/gems/2.1.0/gems/rails_admin-0.6.6/app/assets/javascripts/rails_admin/ra.nested-form-hooks.coffee)):
+     6:     %meta{content: "NONE,NOARCHIVE", name: "robots"}
+     7:     = csrf_meta_tag
+     8:     = stylesheet_link_tag "rails_admin/rails_admin.css", media: :all
+     9:     = javascript_include_tag "rails_admin/rails_admin.js"
+    10:     -# Initialize JS simple i18n
+    11:     :javascript
+    12:       RailsAdmin.I18n.init(JSON.parse("#{j I18n.t("admin.js").to_json}"))
+  execjs (2.4.0) lib/execjs/runtimes.rb:45:in `autodetect'
+  execjs (2.4.0) lib/execjs.rb:5:in `<module:ExecJS>'
+  execjs (2.4.0) lib/execjs.rb:4:in `<top (required)>'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:274:in `require'
+  coffee-script (2.3.0) lib/coffee_script.rb:1:in `<top (required)>'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.1.rc3) lib/active_support/dependencies.rb:274:in `require'
+  tilt (1.4.1) lib/tilt/template.rb:144:in `require_template_library'
+  tilt (1.4.1) lib/tilt/coffee.rb:36:in `initialize_engine'
+  tilt (1.4.1) lib/tilt/template.rb:56:in `initialize'
+  sprockets (2.12.3) lib/sprockets/context.rb:196:in `new'
+  sprockets (2.12.3) lib/sprockets/context.rb:196:in `block in evaluate'
+  sprockets (2.12.3) lib/sprockets/context.rb:194:in `each'
+  sprockets (2.12.3) lib/sprockets/context.rb:194:in `evaluate'
+  sprockets (2.12.3) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.12.3) lib/sprockets/base.rb:374:in `new'
+  sprockets (2.12.3) lib/sprockets/base.rb:374:in `block in build_asset'
+  sprockets (2.12.3) lib/sprockets/base.rb:395:in `circular_call_protection'
+  sprockets (2.12.3) lib/sprockets/base.rb:373:in `build_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.12.3) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.12.3) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/processed_asset.rb:111:in `block in resolve_dependencies'
+  sprockets (2.12.3) lib/sprockets/processed_asset.rb:105:in `each'
+  sprockets (2.12.3) lib/sprockets/processed_asset.rb:105:in `resolve_dependencies'
+  sprockets (2.12.3) lib/sprockets/processed_asset.rb:97:in `build_required_assets'
+  sprockets (2.12.3) lib/sprockets/processed_asset.rb:16:in `initialize'
+  sprockets (2.12.3) lib/sprockets/base.rb:374:in `new'
+  sprockets (2.12.3) lib/sprockets/base.rb:374:in `block in build_asset'
+  sprockets (2.12.3) lib/sprockets/base.rb:395:in `circular_call_protection'
+  sprockets (2.12.3) lib/sprockets/base.rb:373:in `build_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.12.3) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.12.3) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/bundled_asset.rb:16:in `initialize'
+  sprockets (2.12.3) lib/sprockets/base.rb:377:in `new'
+  sprockets (2.12.3) lib/sprockets/base.rb:377:in `build_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.12.3) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.12.3) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/environment.rb:75:in `find_asset'
+  sprockets (2.12.3) lib/sprockets/base.rb:295:in `[]'
+  sprockets-rails (2.2.4) lib/sprockets/rails/helper.rb:230:in `lookup_asset_for_path'
+  sprockets-rails (2.2.4) lib/sprockets/rails/helper.rb:190:in `check_errors_for'
+  sprockets-rails (2.2.4) lib/sprockets/rails/helper.rb:137:in `block in javascript_include_tag'
+  sprockets-rails (2.2.4) lib/sprockets/rails/helper.rb:136:in `map'
+  sprockets-rails (2.2.4) lib/sprockets/rails/helper.rb:136:in `javascript_include_tag'
+  rails_admin (0.6.6) app/views/layouts/rails_admin/application.html.haml:9:in `__var_lib_gems_______gems_rails_admin_______app_views_layouts_rails_admin_application_html_haml___2741888978872939894_24467560'
+  actionview (4.2.1.rc3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.1.rc3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.1.rc3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.1.rc3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.1.rc3) lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+  actionview (4.2.1.rc3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.1.rc3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.1.rc3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1.rc3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1.rc3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1.rc3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1.rc3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1.rc3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.1.rc3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1.rc3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  rails_admin (0.6.6) lib/rails_admin/config/actions/dashboard.rb:33:in `block (2 levels) in <class:Dashboard>'
+  (eval):8:in `instance_eval'
+  (eval):8:in `dashboard'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1.rc3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1.rc3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1.rc3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1.rc3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1.rc3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1.rc3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1.rc3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1.rc3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1.rc3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1.rc3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1.rc3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1.rc3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1.rc3) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1.rc3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1.rc3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1.rc3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1.rc3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1.rc3) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1.rc3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1.rc3) lib/rails/railtie.rb:194:in `public_send'
+  railties (4.2.1.rc3) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1.rc3) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1.rc3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1.rc3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1.rc3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1.rc3) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1.rc3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1.rc3) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1.rc3) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1.rc3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1.rc3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1.rc3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1.rc3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1.rc3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1.rc3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1.rc3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1.rc3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1.rc3) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1.rc3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1.rc3) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.1.rc3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-03-18 12:10:19 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Rendered /var/lib/gems/2.1.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (4.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (16.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_navigation.html.haml (18.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/pjax.html.haml (2.8ms)
+Completed 200 OK in 968ms (Views: 847.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails_admin/rails_admin-2d31aad3b3e5638783ccc3000c7d98a8.css?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery.iframe-transport-ebc4f1574ae0571f2bb666bbabf018b4.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed-865f9575d305fc98e8d3709a9fea2289.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker-6da0e91d1c5e5695df791671745b6a37.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker-b4eeda51f53a34cedb44939f560d32a1.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker-9a48b94d96e0fbe39513cb16b514efce.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.filter-box-2ca62bb924d383fbc184891c75ef7d10.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect-b0ad62df61545153b2e1c3beb26568ff.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-select-3776797f139fda53b5d6eafc71589cc9.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.remote-form-4ef970310afe420256632c59ea4464c6.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/jquery.pjax-a4ad47057a3727dcaafb06ded2097d1f.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/jquery_nested_form-2fc080ce1867853816ee357503ab85b1.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks-85e9b51e95bbd21b87442746d15ca4bf.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.i18n-9bddae8beeca582a6286e80b0681cd8a.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition-8cd2695d7ee2b30315b7e024422eb427.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix-4aa497ad1a679d7fa3de7aa10db2c248.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert-f0634df255bb1dc37f98c8be82434bec.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button-1189204cf501fc7ddbe0384f5c7a3e04.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel-65843039ab1c8b32832fda680448146a.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse-4d358a4cbe9ca0a9cc3e124610787f88.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown-a234ed5390532f267df4f5a13236de95.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal-b75feab289989a62ead5720c2b655fca.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy-5e0c86e7fbc3752c3898df3c690e52fb.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab-54d92c1012635a68526fcf2590679f4a.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip-5a9f4a24a67c380028b0164a546de5f4.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover-9666a38e5d68a25bd4e839bee36f5d30.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead-bf6c6e44516da3a26153d13641dd416a.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-bb91699ea57b047a13ae709f5a28a406.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ra.widgets-15af4f154a6cad79815470df84943cd9.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/ui-81d2df80d1781a63e46f5ac5df0955eb.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/custom/ui-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/rails_admin/rails_admin-fe92b5c96e150ac000ee5d78830f52ee.js?body=1" for 127.0.0.1 at 2015-03-18 12:10:20 -0300
+
+
+Started GET "/assets/fontawesome-webfont-e1e9796e37de923cfba919958e1e7fb0.woff?v=4.3.0" for 127.0.0.1 at 2015-03-18 12:10:21 -0300
