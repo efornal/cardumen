@@ -43,5 +43,5 @@ group :development, :test do
   gem 'spring'
   gem 'pg'
   gem 'rails_admin'
-
+  gem 'devise'
 end
