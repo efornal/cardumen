@@ -11,28 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331123231) do
+ActiveRecord::Schema.define(version: 20150331132330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "offices", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "people", force: :cascade do |t|
-    t.string   "name"
-    t.string   "surname"
+  create_table "employees", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "surname",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "office_id"
+    t.integer  "phone_id"
   end
 
-  add_index "people", ["office_id"], name: "index_people_on_office_id", using: :btree
+  add_index "employees", ["office_id"], name: "index_employees_on_office_id", using: :btree
+  add_index "employees", ["phone_id"], name: "index_employees_on_phone_id", using: :btree
+
+  create_table "offices", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.string   "phone"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "phones", force: :cascade do |t|
+    t.string   "number",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "office_id",  null: false
+  end
+
+  add_index "phones", ["office_id"], name: "index_phones_on_office_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
