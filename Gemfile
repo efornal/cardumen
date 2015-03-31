@@ -44,4 +44,6 @@ group :development, :test do
   gem 'pg'
   gem 'rails_admin'
   gem 'devise'
+  gem 'bootstrap-sass'
+  gem 'bootswatch-rails'
 end
