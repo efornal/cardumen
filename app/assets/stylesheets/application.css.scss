@@ -18,7 +18,7 @@
 @import "bootstrap-sprockets";
 
 // Import cerulean variables
-@import "bootswatch/cerulean/variables";
+@import "bootswatch/united/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
@@ -31,3 +31,9 @@ body { padding-top: 60px; }
 
 // Whatever application styles you have go last
 //@import "base";
+
+.logo-header{  
+    height: 50px;
+    float: left;
+    margin-left: 30px;
+}
