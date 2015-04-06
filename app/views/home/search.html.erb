@@ -20,9 +20,9 @@
             <% @employees.each do |employee|  %>
             <tr>
               <td><%= employee.name_and_surname %></td>
-              <td><%#= office.name %></td>
-              <td><%#= office.phone %></td>
-              <td><%= employee.phone.number %></td>
+              <td><%= employee.office.name %></td>
+              <td><%= employee.office.phone %></td>
+              <td><%= employee.phone %></td>
             </tr>
             <% end %>
           </tbody>
