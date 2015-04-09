@@ -18,7 +18,7 @@
           </thead>
           <tbody>
             <% @offices.each do |office| %>
-              <% office.employees.each do |employee|  %>
+              <% office.employees.order("surname ASC").each do |employee|  %>
                 <tr>
                 <td><%= employee.name_and_surname %></td>
                 <td><%= office.name %></td>
