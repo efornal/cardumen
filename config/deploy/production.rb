@@ -49,13 +49,13 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server 'host',
-#   user: 'user',
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: 'user', # overrides user setting above
-# #    keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: true,
-#     auth_methods: %w(publickey)
-#     # password: 'please use keys'
-#   }
+server 'liebig.intranet',
+  user: 'efornal',
+  roles: %w{web app},
+  ssh_options: {
+    user: 'efornal', # overrides user setting above
+#    keys: %w(/home/user_name/.ssh/id_rsa),
+    forward_agent: true,
+    auth_methods: %w(publickey)
+    # password: 'please use keys'
+  }
