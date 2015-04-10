@@ -31,49 +31,58 @@
 
     </script>
   </head>
+
   <body>
+    <% if notice or alert  %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <% end %>
     <div class="navbar navbar-default navbar-fixed-top">
-      <img class="logo-header" src="/assets/logo.png">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="#" class="navbar-brand">Cardumen</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
+
+      <div class="navbar-header">
+        <img class="logo-header" src="/assets/logo.png">
+        <a href="http://liebig.intranet/" class="navbar-brand">Cardumen</a>
       </div>
-    </div>
 
-
-    <div class="container">
-
-      <div class="form-group" style="margin:-50px -5% 0 0;">
-          <%= form_tag(home_search_path, method: "get") do %>
-          <div class="input-group">
-            <input class="form-control" type="text" name="text_search">
-            <span class="input-group-btn">
-              <%= submit_tag "Buscar", class: "btn btn-default" %>
-            </span>
-          </div>
+      <div class="form-group" style="margin:-50px 0 0 0;">
+        <%= form_tag(home_search_path, method: "get", class:"form-group text-right pull-right  col-lg-3", style:"margin:10px;") do %>
+        <div class="input-group" style="padding: 0px;margin: 0px">
+          <input class="form-control" name="text_search"
+                 type="text" placeholder="Nombre / Apellido" autofocus>
+          <span class="input-group-btn">
+            <%= submit_tag "Filtrar", class: "btn btn-default" %>
+          </span>
+        </div>
         <% end %>
       </div>
-  
+
+      <div class="form-group col-lg-3 pull-right" style="margin:10px">
+        <%= select_tag "offices", options_from_collection_for_select(@offices, "id", "name"),
+            class:"form-control", id:"sel_office", include_blank:"Todas las oficinas" %>
+      </div>
+
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="container">
+    
       <%= yield %>
       
     </div>
 
 
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../assets/js/bootswatch.js"></script>
-<script type="text/javascript">
-  /* <![CDATA[ */
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootswatch.js"></script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
 (function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
 /* ]]> */
-</script>
-</body>
+    </script>
+  </body>
 </html>
