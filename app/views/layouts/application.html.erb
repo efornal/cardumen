@@ -58,7 +58,7 @@
 
       <div class="form-group col-lg-3 pull-right" style="margin:10px">
         <%= form_tag(home_search_path, method: "get", name:"search_form") do %>
-        <%= select_tag "id", options_from_collection_for_select(@offices, "id", "name"),
+        <%= select_tag "id", options_from_collection_for_select(@offices, "id", "name", params['id']),
             class:"form-control", id:"sel_office", include_blank:"Todas las oficinas",
             onChange: "document.forms['search_form'].submit();" %>
         <% end %>
