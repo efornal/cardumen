@@ -46,4 +46,6 @@ group :development, :test do
   gem 'devise'
   gem 'bootstrap-sass'
   gem 'bootswatch-rails'
+  gem 'activeldap', :require => 'active_ldap/railtie'
+  gem 'ruby-ldap'
 end
