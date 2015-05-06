@@ -1,7 +1,10 @@
+require 'users'
+
 class HomeController < ApplicationController
 
   def index
     @offices = Office.all.order("name ASC")
+    @usuarios = Users.all
   end
 
 
