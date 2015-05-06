@@ -14,15 +14,13 @@
             </tr>
           </thead>
           <tbody>
-            <% @offices.each do |office| %>
-              <% office.employees.order("surname ASC").each do |employee|  %>
+              <% @usuarios.each do |u| %>
                 <tr>
-                <td><%= employee.name_and_surname %></td>
-                <td><%= office.name %></td>
-                <td><%= office.phone %></td>
-                <td><%= employee.phone %></td>
+                <td><%= u.cn %></td>
+                <td><%#= office.name %></td>
+                <td><%#= office.phone %></td>
+                <td><%#= employee.phone %></td>
                 </tr>
-              <% end %>
             <% end %>
           </tbody>
         </table> 
