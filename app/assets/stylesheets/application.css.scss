@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,6 +14,10 @@
  * require_tree .
  * require_self
  */
+
+/*
+*= require jquery-ui
+*/
 
 //Import bootstrap-sprockets
 @import "bootstrap-sprockets";
@@ -31,6 +36,7 @@ body { padding-top: 60px; }
 
 // Whatever application styles you have go last
 //@import "base";
+
 
 .logo-header{  
     height: 50px;

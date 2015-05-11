@@ -47,7 +47,8 @@
       <div class="form-group" style="margin:-50px 0 0 0;">
         <%= form_tag(home_search_path, method: "get", class:"form-group text-right pull-right  col-lg-3", style:"margin:10px;") do %>
         <div class="input-group" style="padding: 0px;margin: 0px">
-          <input class="form-control" name="text_search" value="<%= params['text_search']%>"
+          <input class="form-control" name="text_search" id="text_search"
+                 value="<%= params['text_search']%>"
                  type="text" placeholder="Nombre / Apellido" autofocus>
           <span class="input-group-btn">
             <%= submit_tag "Filtrar", class: "btn btn-default" %>

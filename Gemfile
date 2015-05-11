@@ -46,4 +46,6 @@ group :development, :test do
   gem 'devise'
   gem 'bootstrap-sass'
   gem 'bootswatch-rails'
+  gem 'jquery-ui-rails'
+
 end

@@ -23,4 +23,22 @@ class HomeController < ApplicationController
   end
 
 
+  def autocomplete
+    unless params.include?('text_search')
+      respond_to do |format|
+        format.js {render :json => ""}
+      end
+    end
+    text = params["text_search"]
+    @employees = Employee.where("name ilike ? or surname ilike ?", "#{text}%", "#{text}%")
+                 .order("surname ASC")
+    @employees =  @employees.as_json
+    @employees =  @employees.to_json
+
+    respond_to do |format|
+      format.js {render :json => @employees}
+    end
+  end
+
+
 end
