@@ -22,6 +22,14 @@ class HomeController < ApplicationController
 
   end
 
+  def office_search
+    @offices = Office.all.order("name ASC")
+
+    @employees = Employee.where("office_id = ?", params['id']).order("surname ASC")
+
+
+    render :partial => "home/search"
+  end
 
   def autocomplete
     unless params.include?('text_search')

@@ -27,3 +27,19 @@ $(function() {
         }
     });
 });
+
+$(document).ready(function(){
+    $("#sel_office").change(function () {
+        elegido=$(this).val();
+        jQuery.ajax({
+            url: "/home/office_search/" + elegido,
+            type: "GET",
+            //data: {"id" : elegido },
+            dataType: "html",
+            success: function(data) {
+                jQuery("#container").html(data);
+            }
+        });
+
+    });
+});

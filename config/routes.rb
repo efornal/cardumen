@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/search'
   get 'home/search/:id' => 'home#search'
+  get 'home/office_search/:id' => 'home#office_search'
   get "home/autocomplete"
   get "autocomplete" => 'home#autocomplete'
 
