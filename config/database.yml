@@ -8,7 +8,7 @@ default: &default
   adapter: postgresql
   database: cardumen_db
   username: cardumen_owner
-  port: 5433
+  port: 5432
   password: owner
   host: 127.0.0.1
 
